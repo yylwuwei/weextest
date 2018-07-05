@@ -4,6 +4,10 @@ node_modules/
 Platforms/ios/build
 Platforms/ios/Pods
 Platforms/ios/bundlejs
+platforms/android/.gradle/
+platforms/android/app/build/
+platforms/android/app/src/main/assets/dist/
+platforms/android/build/
 /dist/
 npm-debug.log*
 yarn-debug.log*
