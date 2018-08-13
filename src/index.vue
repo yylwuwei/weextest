@@ -3,9 +3,9 @@
     <!--
     <image :src="logo" class="logo" />
     <text class="greeting">The environment is ready!</text>
-     HelloWorld/>
+    <HelloWorld/>
     -->
-    <Login />
+    <Login/>
   </div>
 </template>
 
