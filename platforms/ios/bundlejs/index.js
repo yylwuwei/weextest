@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -119,8 +119,15 @@ module.exports.render._withStripped = true
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
+/* styles */
+__vue_styles__.push(__webpack_require__(3)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(4)
+
 /* template */
-var __vue_template__ = __webpack_require__(3)
+var __vue_template__ = __webpack_require__(5)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -135,6 +142,7 @@ if (typeof __vue_options__ === "function") {
 __vue_options__.__file = "/Users/yeyulin/Documents/yyl_github/weextest/src/components/Login.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-a4ad445a"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -152,13 +160,147 @@ module.exports = __vue_exports__
 /* 3 */
 /***/ (function(module, exports) {
 
+module.exports = {
+  "wrapper": {
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "width": "470",
+    "marginTop": "30",
+    "marginLeft": "0",
+    "paddingTop": "20",
+    "paddingBottom": "20",
+    "borderWidth": "2",
+    "borderStyle": "solid",
+    "borderColor": "#DDDDDD",
+    "backgroundColor": "#F5F5F5"
+  },
+  "text": {
+    "fontSize": "30",
+    "color": "#666666",
+    "textAlign": "center"
+  },
+  "input": {
+    "borderWidth": "1",
+    "borderColor": "#dddddd",
+    "width": "300"
+  }
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var modal = weex.requireModule('modal');
+var navigator = weex.requireModule('navigator');
+exports.default = {
+  methods: {
+    onclick: function onclick(event) {
+      console.log('you click the button');
+      var bundleUrl = weex.config.bundleUrl;
+      modal.alert({ message: bundleUrl });
+      var nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1);
+      var platformSelect = weex.config.env.platform;
+      if (platformSelect === 'Web') {
+        var webUrl = nativeBase + 'components/Home.html';
+        navigator.push({
+          url: webUrl,
+          animated: 'true'
+        }, function (event) {
+          modal.alert({ message: 'you click web' });
+        });
+      } else if (platformSelect === 'ios') {
+        var iosUrl = nativeBase + 'components/Home.js';
+        navigator.push({
+          url: iosUrl,
+          animated: 'true'
+        }, function (event) {
+          modal.alert({ message: 'you click ios' });
+        });
+      } else if (platformSelect === 'android') {
+        modal.alert({ message: 'android' });
+        var androidUrl = nativeBase + 'components/Home.js';
+        // var androidUrl = 'local://' + nativeBase + 'index.js'
+        // var androidUrl = 'local://file://assets/dist/components/Home.js'
+        navigator.push({
+          url: androidUrl,
+          animated: 'true'
+        }, function (event) {
+          modal.alert({ message: 'you click android' });
+        });
+      }
+    }
+  }
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
+  return _c('div', [_vm._m(0), _vm._m(1), _c('div', {
+    staticClass: ["wrapper"]
+  }, [_c('text', {
+    staticClass: ["text"],
+    on: {
+      "click": _vm.onclick
+    }
+  }, [_vm._v("登  录")])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('text', [_vm._v("用户名")]), _c('input', {
+  return _c('div', {
+    staticStyle: {
+      flexDirection: "row",
+      marginBottom: "40px"
+    }
+  }, [_c('text', {
+    staticStyle: {
+      marginRight: "20px"
+    }
+  }, [_vm._v("用户：")]), _c('input', {
+    staticClass: ["input"],
     attrs: {
       "type": "text",
       "placeholder": "请输入用户名",
+      "value": ""
+    }
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticStyle: {
+      flexDirection: "row",
+      marginBottom: "40px"
+    }
+  }, [_c('text', {
+    staticStyle: {
+      marginRight: "20px"
+    }
+  }, [_vm._v("密码：")]), _c('input', {
+    staticClass: ["input"],
+    attrs: {
+      "type": "password",
+      "placeholder": "请输入密码",
       "value": ""
     }
   })])
@@ -166,15 +308,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _index = __webpack_require__(7);
+var _index = __webpack_require__(13);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -184,21 +330,21 @@ _index2.default.el = '#root';
 new Vue(_index2.default);
 
 /***/ }),
-/* 7 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(8)
+__vue_styles__.push(__webpack_require__(14)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(9)
+__vue_exports__ = __webpack_require__(15)
 
 /* template */
-var __vue_template__ = __webpack_require__(10)
+var __vue_template__ = __webpack_require__(16)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -228,7 +374,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 8 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -257,7 +403,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 9 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -303,7 +449,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 10 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

@@ -16,6 +16,12 @@ yarn-error.log*
 /test/e2e/reports/
 selenium-debug.log
 
+platforms/android/.project
+platforms/android/.settings/
+platforms/android/app/.classpath
+platforms/android/app/.project
+platforms/android/app/.settings/
+
 # Editor directories and files
 .idea
 .vscode
