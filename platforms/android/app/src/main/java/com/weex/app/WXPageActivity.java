@@ -102,6 +102,7 @@ public class WXPageActivity extends AbsWeexActivity implements
         }
       } catch (JSONException e) {
         e.printStackTrace();
+        mUri = uri; // yyl add
       }
     }
 

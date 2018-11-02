@@ -22,7 +22,6 @@ export default {
     onclick (event) {
       console.log('you click the button')
       var bundleUrl = weex.config.bundleUrl
-      modal.alert({message: bundleUrl})
       var nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1)
       var platformSelect = weex.config.env.platform
       if (platformSelect === 'Web') {
@@ -31,7 +30,7 @@ export default {
           url: webUrl,
           animated: 'true'
         }, event => {
-          modal.alert({message: 'you click web'})
+          // modal.alert({message: 'you click web'})
         })
       } else if (platformSelect === 'ios') {
         var iosUrl = nativeBase + 'components/Home.js'
@@ -39,18 +38,15 @@ export default {
           url: iosUrl,
           animated: 'true'
         }, event => {
-          modal.alert({message: 'you click ios'})
+          // modal.alert({message: 'you click ios'})
         })
       } else if (platformSelect === 'android') {
-        modal.alert({message: 'android'})
         var androidUrl = nativeBase + 'components/Home.js'
-        // var androidUrl = 'local://' + nativeBase + 'index.js'
-        // var androidUrl = 'local://file://assets/dist/components/Home.js'
         navigator.push({
           url: androidUrl,
           animated: 'true'
         }, event => {
-          modal.alert({message: 'you click android'})
+          // modal.alert({message: 'you click android'})
         })
       }
     }
