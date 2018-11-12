@@ -38,7 +38,7 @@ export default {
           url: iosUrl,
           animated: 'true'
         }, event => {
-          // modal.alert({message: 'you click ios'})
+          modal.alert({message: 'you click ios'})
         })
       } else if (platformSelect === 'android') {
         var androidUrl = nativeBase + 'components/Home.js'
