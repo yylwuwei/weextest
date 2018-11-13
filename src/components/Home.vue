@@ -1,19 +1,32 @@
 <template>
   <!-- <text class="text">I am a new home page.</text> -->
   <wxc-tab-bar :tab-titles="tabTitles" :tab-styles="tabStyles" title-type="icon" @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
-    <div class="item-container" :style="contentStyle"><text>Home</text></div>
-    <div class="item-container" :style="contentStyle"><text>Hot</text></div>
-    <div class="item-container" :style="contentStyle"><text>Message</text></div>
-    <div class="item-container" :style="contentStyle"><text>My</text></div>
+    <div class="item-container" :style="contentStyle">
+      <Main/>
+    </div>
+    <div class="item-container" :style="contentStyle">
+      <Message/>
+    </div>
+    <div class="item-container" :style="contentStyle">
+      <My/>
+    </div>
   </wxc-tab-bar>
 </template>
 
 <script>
+import Main from './Main/Main.vue'
+import Message from './Message/Message.vue'
+import My from './My/My.vue'
 import { WxcTabBar, Utils } from 'weex-ui'
 import YConfig from './yconfig'
 
 export default {
-  components: { WxcTabBar },
+  components: {
+    WxcTabBar,
+    Main,
+    Message,
+    My
+  },
   data: () => ({
     tabTitles: YConfig.tabTitles,
     tabStyles: YConfig.tabStyles
