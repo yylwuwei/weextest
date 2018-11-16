@@ -62,18 +62,23 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 268);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
+/* styles */
+__vue_styles__.push(__webpack_require__(16)
+)
+
 /* template */
-var __vue_template__ = __webpack_require__(1)
+var __vue_template__ = __webpack_require__(17)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -88,6 +93,7 @@ if (typeof __vue_options__ === "function") {
 __vue_options__.__file = "/Users/yeyulin/Documents/yyl_github/weextest/src/components/HelloWorld.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-2b935934"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -102,32 +108,130 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 1 */
+
+/***/ 16:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "wxc-tab-page2": {
+    "position": "absolute",
+    "top": 0,
+    "left": 0,
+    "right": 0,
+    "bottom": 0
+  },
+  "testcss": {
+    "flex": 1
+  },
+  "panel": {
+    "width": "600",
+    "height": "250",
+    "marginLeft": "75",
+    "marginTop": "35",
+    "marginBottom": "35",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "borderWidth": "2",
+    "borderStyle": "solid",
+    "borderColor": "rgb(162,217,192)",
+    "backgroundColor": "rgba(162,217,192,0.2)"
+  },
+  "text": {
+    "fontSize": "50",
+    "textAlign": "center",
+    "color": "#41B883"
+  }
+}
+
+/***/ }),
+
+/***/ 17:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('text', {
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["wxc-tab-page"]
+  }, [_c('div', [_c('text', {
     staticClass: ["message"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])
-},staticRenderFns: []}
+  }, [_vm._v("Now, I an tom.")])]), _c('div', {
+    staticClass: ["testcss"]
+  }, [_c('list', {
+    staticClass: ["list"]
+  }, [_c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("626")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("627")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("628")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("629")])])]), _c('cell', {
+    staticClass: ["cell"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }, [_c('div', {
+    staticClass: ["panel"]
+  }, [_c('text', {
+    staticClass: ["text"]
+  }, [_vm._v("630")])])])])]), _c('div', [_c('text', {
+    staticClass: ["message"]
+  }, [_vm._v("Now, I love china.")])])])
+}]}
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 2 */
+
+/***/ 253:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(3)
+__vue_styles__.push(__webpack_require__(254)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(4)
+__vue_exports__ = __webpack_require__(255)
 
 /* template */
-var __vue_template__ = __webpack_require__(5)
+var __vue_template__ = __webpack_require__(256)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -157,7 +261,8 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 3 */
+
+/***/ 254:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -187,7 +292,8 @@ module.exports = {
 }
 
 /***/ }),
-/* 4 */
+
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -220,18 +326,20 @@ exports.default = {
     onclick: function onclick(event) {
       console.log('you click the button');
       var bundleUrl = weex.config.bundleUrl;
-      modal.alert({ message: bundleUrl });
       var nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1);
       var platformSelect = weex.config.env.platform;
+      // modal.alert({message: platformSelect})
       if (platformSelect === 'Web') {
         var webUrl = nativeBase + 'components/Home.html';
+        // var webUrl = nativeBase + 'components/HelloWorld.html'
         navigator.push({
           url: webUrl,
           animated: 'true'
         }, function (event) {
-          modal.alert({ message: 'you click web' });
+          // modal.alert({message: 'you click web'})
         });
-      } else if (platformSelect === 'ios') {
+      } else if (platformSelect === 'iOS') {
+        // modal.alert({message: 'you enter ios'})
         var iosUrl = nativeBase + 'components/Home.js';
         navigator.push({
           url: iosUrl,
@@ -240,15 +348,12 @@ exports.default = {
           modal.alert({ message: 'you click ios' });
         });
       } else if (platformSelect === 'android') {
-        modal.alert({ message: 'android' });
         var androidUrl = nativeBase + 'components/Home.js';
-        // var androidUrl = 'local://' + nativeBase + 'index.js'
-        // var androidUrl = 'local://file://assets/dist/components/Home.js'
         navigator.push({
           url: androidUrl,
           animated: 'true'
         }, function (event) {
-          modal.alert({ message: 'you click android' });
+          // modal.alert({message: 'you click android'})
         });
       }
     }
@@ -256,7 +361,8 @@ exports.default = {
 };
 
 /***/ }),
-/* 5 */
+
+/***/ 256:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -308,19 +414,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
+
+/***/ 268:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _index = __webpack_require__(13);
+var _index = __webpack_require__(269);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -330,21 +431,22 @@ _index2.default.el = '#root';
 new Vue(_index2.default);
 
 /***/ }),
-/* 13 */
+
+/***/ 269:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(14)
+__vue_styles__.push(__webpack_require__(270)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(15)
+__vue_exports__ = __webpack_require__(271)
 
 /* template */
-var __vue_template__ = __webpack_require__(16)
+var __vue_template__ = __webpack_require__(272)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -374,7 +476,8 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 14 */
+
+/***/ 270:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -403,7 +506,8 @@ module.exports = {
 }
 
 /***/ }),
-/* 15 */
+
+/***/ 271:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -413,11 +517,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _HelloWorld = __webpack_require__(0);
+var _HelloWorld = __webpack_require__(15);
 
 var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
 
-var _Login = __webpack_require__(2);
+var _Login = __webpack_require__(253);
 
 var _Login2 = _interopRequireDefault(_Login);
 
@@ -449,7 +553,8 @@ exports.default = {
 };
 
 /***/ }),
-/* 16 */
+
+/***/ 272:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -460,4 +565,5 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ })
-/******/ ]);
+
+/******/ });

@@ -24,6 +24,7 @@ export default {
       var bundleUrl = weex.config.bundleUrl
       var nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1)
       var platformSelect = weex.config.env.platform
+      // modal.alert({message: platformSelect})
       if (platformSelect === 'Web') {
         var webUrl = nativeBase + 'components/Home.html'
         // var webUrl = nativeBase + 'components/HelloWorld.html'
@@ -33,7 +34,8 @@ export default {
         }, event => {
           // modal.alert({message: 'you click web'})
         })
-      } else if (platformSelect === 'ios') {
+      } else if (platformSelect === 'iOS') {
+        // modal.alert({message: 'you enter ios'})
         var iosUrl = nativeBase + 'components/Home.js'
         navigator.push({
           url: iosUrl,
