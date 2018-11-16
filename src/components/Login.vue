@@ -26,6 +26,7 @@ export default {
       var platformSelect = weex.config.env.platform
       if (platformSelect === 'Web') {
         var webUrl = nativeBase + 'components/Home.html'
+        // var webUrl = nativeBase + 'components/HelloWorld.html'
         navigator.push({
           url: webUrl,
           animated: 'true'

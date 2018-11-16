@@ -1,5 +1,4 @@
 <template>
-  <!-- <text class="text">I am a new home page.</text> -->
   <wxc-tab-bar :tab-titles="tabTitles" :tab-styles="tabStyles" title-type="icon" @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
     <div class="item-container" :style="contentStyle">
       <Main/>
